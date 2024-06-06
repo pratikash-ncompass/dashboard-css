@@ -70,6 +70,8 @@ let websiteTrafficChart = new Chart(linectx, {
         pointHoverBorderColor: "rgba(59, 130, 246, 1)",
         fill: true,
         tension: 0.4,
+        pointRadius: 0, // Hide points by default
+        pointHoverRadius: 6, // Show points on hover
       },
     ],
   },
@@ -328,7 +330,7 @@ const data = {
   labels: ["", "", "", "", "", "", "", "", "", ""],
   datasets: [
     {
-      label: "sessions",
+      label: "",
       data: [5600, 3500, 4800, 2500, 3700, 5300, 3200, 4200, 3000, 6000],
       barThickness: 18,
       backgroundColor: "#22BDFF",
@@ -340,6 +342,11 @@ const data = {
 };
 const options = {
   responsive: true,
+  ticks:{
+    x:{
+      
+    }
+  },
   scales: {
     x: {
       grid: {

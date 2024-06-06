@@ -484,7 +484,7 @@ td {
     text-align: left;
     border-bottom: 1px solid var(--secondary-background);
     color: var(--secondary-text);
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 th {
