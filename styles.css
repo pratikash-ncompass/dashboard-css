@@ -305,17 +305,19 @@ main {
 
 .middle-container {
     display: flex;
-    margin-top: 24px;
+    margin-top: 1.5rem;
     gap: 24px;
     width: 100%;
+    height: 40%;
+    margin-bottom: 2rem;
 }
 
 .line-chart-container {
     background-color: var(--primary-background);
     border-radius: 8px;
-    height: 370px;
-    padding: 20px;
-    width: 650px;
+    height: 100%;
+    padding: 2.2rem;
+    width: 60%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 }
@@ -340,16 +342,18 @@ main {
 }
 
 .line-chart {
-    width: 100%;
+    height: 70%;
+    width: 99%;
     height: fit-content;
 }
 
 .pie-chart-container {
     background-color: var(--primary-background);
     border-radius: 8px;
-    height: 370px;
-    padding: 20px;
-    width: 350px;
+    height: 100%;
+    padding: 2rem;
+    width: 40%;
+    align-items: center;
     /*use flex basis*/
     flex: 1;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -382,7 +386,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 1rem 0;
 }
 
 .pie-chart-label {
@@ -480,6 +484,7 @@ td {
     text-align: left;
     border-bottom: 1px solid var(--secondary-background);
     color: var(--secondary-text);
+    font-size: 0.8rem;
 }
 
 th {
@@ -492,7 +497,9 @@ td img {
     height: 24px;
     margin-right: 10px;
     vertical-align: middle;
+    display: inline-block;
 }
+
 
 .browser {
     font-weight: 600;

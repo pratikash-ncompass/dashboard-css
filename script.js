@@ -103,16 +103,11 @@ let websiteTrafficChart = new Chart(linectx, {
 let lineUpChart = new Chart(lineUpctx1, {
   type: "line",
   data: {
-    labels: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr"
-    ],
+    labels: ["Jan", "Feb", "Mar", "Apr"],
     datasets: [
       {
         label: "Website Traffic",
-        data: [1000, 1500, 1300, 2000 ],
+        data: [1000, 1500, 1300, 2000],
         backgroundColor: gradient2,
         borderColor: "green",
         borderWidth: 2,
@@ -154,16 +149,11 @@ let lineUpChart = new Chart(lineUpctx1, {
 let lineUpChart2 = new Chart(lineUpctx2, {
   type: "line",
   data: {
-    labels: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr"
-    ],
+    labels: ["Jan", "Feb", "Mar", "Apr"],
     datasets: [
       {
         label: "Website Traffic",
-        data: [1000, 1500, 1300, 2000 ],
+        data: [1000, 1500, 1300, 2000],
         backgroundColor: gradient2,
         borderColor: "green",
         borderWidth: 2,
@@ -202,20 +192,14 @@ let lineUpChart2 = new Chart(lineUpctx2, {
   },
 });
 
-
 let linedownChart = new Chart(linedownctx1, {
   type: "line",
   data: {
-    labels: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr"
-    ],
+    labels: ["Jan", "Feb", "Mar", "Apr"],
     datasets: [
       {
         label: "Website Traffic",
-        data: [2000, 1300, 1500, 1000 ],
+        data: [2000, 1300, 1500, 1000],
         backgroundColor: gradient3,
         borderColor: "red",
         borderWidth: 2,
@@ -254,20 +238,14 @@ let linedownChart = new Chart(linedownctx1, {
   },
 });
 
-
 let linedownChart2 = new Chart(linedownctx2, {
   type: "line",
   data: {
-    labels: [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr"
-    ],
+    labels: ["Jan", "Feb", "Mar", "Apr"],
     datasets: [
       {
         label: "Website Traffic",
-        data: [2000, 1300, 1500, 1000 ],
+        data: [2000, 1300, 1500, 1000],
         backgroundColor: gradient3,
         borderColor: "red",
         borderWidth: 2,
