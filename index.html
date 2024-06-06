@@ -29,9 +29,10 @@
             <div class="wide-navbar-element">
                 <div class="search-container">
 
+                    <!-- <label><button> <img src="./assets/search-interface-symbol.png" alt="search icon"></button></label> -->
                     <input type="text" placeholder="Search something here">
                     <button>
-                        <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" alt="search icon">
+                        <img src="./assets/search-interface-symbol.png" alt="search icon">
                     </button>
                 </div>
             </div>
@@ -112,7 +113,9 @@
                         </div>
                     </div>
                     <div class="stat-graph">
-                        <img src="./assets/green-line.png" alt="growth graph image">
+                        <!-- <img src="./assets/green-line.png" alt="growth graph image"> -->
+                        <canvas id="lineUp"></canvas>
+                    
                     </div>
                 </div>
                 <div class="stat-item">
@@ -125,7 +128,9 @@
                         </div>
                     </div>
                     <div class="stat-graph">
-                        <img src="./assets/red-line.png" alt="decline graph image">
+                        <!-- <img src="./assets/red-line.png" alt="decline graph image"> -->
+                        <canvas id="linedown"></canvas>
+
                     </div>
                 </div>
                 <div class="stat-item">
@@ -138,7 +143,9 @@
                         </div>
                     </div>
                     <div class="stat-graph">
-                        <img src="./assets/green-line.png" alt="growth graph image">
+                        <!-- <img src="./assets/green-line.png" alt="growth graph image"> -->
+                        <canvas id="lineUp2"></canvas>
+
                     </div>
                 </div>
                 <div class="stat-item">
@@ -151,7 +158,9 @@
                         </div>
                     </div>
                     <div class="stat-graph">
-                        <img src="./assets/red-line.png" alt="decline graph image">
+                        <!-- <img src="./assets/red-line.png" alt="decline graph image"> -->
+                        <canvas id="linedown2"></canvas>
+
                     </div>
                 </div>
             </div>
@@ -190,31 +199,31 @@
                             <div class="pie-chart-label">
                                 <div class="label-icon desktop"><i class="fa-solid fa-desktop"></i></div>
                                 <div class="label-text">
-                                    <p>Desktop</p>
-                                    <p>70.28%</p>
+                                    <p class="label-name">Desktop</p>
+                                    <p class="label-value">70.28%</p>
                                 </div>
                             </div>
                             <div class="pie-chart-label">
                                 <div class="label-icon mobile"><i class="fa-solid fa-mobile-screen-button"></i></i>
                                 </div>
                                 <div class="label-text">
-                                    <p>Mobile</p>
-                                    <p>18.92%</p>
+                                    <p class="label-name">Mobile</p>
+                                    <p class="label-value">18.92%</p>
                                 </div>
                             </div>
                             <div class="pie-chart-label">
                                 <div class="label-icon tablet"><i class="fa-solid fa-tablet-screen-button"></i></i>
                                 </div>
                                 <div class="label-text">
-                                    <p>Tablet</p>
-                                    <p>8.94%</p>
+                                    <p class="label-name">Tablet</p>
+                                    <p class="label-value">8.94%</p>
                                 </div>
                             </div>
                             <div class="pie-chart-label">
                                 <div class="label-icon others"><i class="fa-solid fa-layer-group"></i></i></div>
                                 <div class="label-text">
-                                    <p>Others</p>
-                                    <p>2.31%</p>
+                                    <p class="label-name">Others</p>
+                                    <p class="label-value">2.31%</>
                                 </div>
                             </div>
                         </div>
@@ -257,33 +266,37 @@
                             <tbody>
                                 <tr>
                                     <td class="browser"><img src="./assets/chrome.png" alt="Chrome">Chrome</td>
-                                    <td><span class="change-indicator"><i class="fas fa-arrow-up"></i>22,180</span></td>
+                                    <td><span class="change-indicator"><img class="arrow" src="./assets/up-arrow.png"
+                                                alt="">22,180</span></td>
                                     <td>39.21%</td>
                                     <td class="last-column">36,213</td>
                                 </tr>
                                 <tr>
                                     <td class="browser"><img src="./assets/firefox.png" alt="Firefox">Firefox</td>
-                                    <td><span class="change-indicator down"><i
-                                                class="fas fa-arrow-down"></i>16,124</span></td>
+                                    <td><span class="change-indicator down"><img class="arrow" src="./assets/down.png   "
+                                        alt=""></i>16,124</span></td>
                                     <td>45.27%</td>
                                     <td class="last-column">31,170</td>
                                 </tr>
                                 <tr>
                                     <td class="browser"><img src="./assets/edge.png" alt="Edge">Edge
                                     </td>
-                                    <td><span class="change-indicator"><i class="fas fa-arrow-up"></i>26,346</span></td>
+                                    <td><span class="change-indicator"><img class="arrow" src="./assets/up-arrow.png"
+                                        alt="">26,346</span></td>
                                     <td>28.62%</td>
                                     <td class="last-column">29,126</td>
                                 </tr>
                                 <tr>
                                     <td class="browser"><img src="./assets/safari.png" alt="Safari">Safari</td>
-                                    <td><span class="change-indicator"><i class="fas fa-arrow-up"></i>18,620</span></td>
+                                    <td><span class="change-indicator"><img class="arrow" src="./assets/down.png"
+                                        alt="">18,620</span></td>
                                     <td>56.12%</td>
                                     <td class="last-column">12,521</td>
                                 </tr>
                                 <tr>
                                     <td class="browser"><img src="./assets/opera.png" alt="Opera">Opera</td>
-                                    <td><span class="change-indicator"><i class="fas fa-arrow-up"></i>24,347</span></td>
+                                    <td><span class="change-indicator"><img class="arrow" src="./assets/up-arrow.png"
+                                        alt="">24,347</span></td>
                                     <td>32.92%</td>
                                     <td class="last-column">10,890</td>
                                 </tr>

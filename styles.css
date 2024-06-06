@@ -9,6 +9,8 @@
     --secondary-blue: #4461f7;
     --tertiary-blue: #6ed4ff;
     --quarternary-blue: #C7EEFF;
+    --label-primary-bg: #d5dcff4b;
+    --label-secondary-bg: #92d4f727;
 }
 
 
@@ -80,6 +82,7 @@ body {
 
 .search-container input::placeholder {
     color: var(--secondary-text);
+    opacity: 0.5;
 }
 
 .search-container button {
@@ -90,12 +93,13 @@ body {
     background: none;
     border: none;
     cursor: pointer;
+    margin-top: 3px;
 }
 
 .search-container button img {
     width: 16px;
     height: 16px;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 .profile-element i {
@@ -152,6 +156,9 @@ main {
     flex-direction: column;
     justify-content: space-between;
     color: var(--secondary-text);
+    font-size: 0.9rem;
+    letter-spacing: 0;
+    font-weight: 500;
 }
 
 .sidebar-item {
@@ -163,11 +170,13 @@ main {
     border-radius: 8px;
     cursor: pointer;
 }
-.sidebar-item i{
+
+.sidebar-item i {
     width: 20px;
     text-align: center;
 }
-.sidebar-item p{
+
+.sidebar-item p {
     padding-left: 10px;
 }
 
@@ -195,7 +204,8 @@ main {
     background-color: var(--secondary-blue);
     color: var(--primary-background);
     border-radius: 8px;
-    height: 33%;    /*change*/
+    height: 33%;
+    /*change*/
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -234,15 +244,18 @@ main {
 }
 
 .total-stats-container {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 3%;
 }
 
 .stat-item {
     background-color: var(--primary-background);
-    width: fit-content;
+    width: 100%;
     display: flex;
-    gap: 10px;
     padding: 16px 24px;
     border-radius: 8px;
 }
@@ -253,8 +266,14 @@ main {
 
 .stats p {
     color: var(--secondary-text);
+    font-weight: 500;
 }
-
+.stat-graph{
+    padding-top: 20px;
+    height: 80px;
+    width: 80px;
+    align-items: center;
+}
 .numbers {
     padding-top: 10px;
 }
@@ -264,7 +283,7 @@ main {
 }
 
 .numbers>p {
-    font-size: 14px;
+    font-size: 0.7rem;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -330,7 +349,8 @@ main {
     border-radius: 8px;
     height: 370px;
     padding: 20px;
-    width: 350px; /*use flex basis*/
+    width: 350px;
+    /*use flex basis*/
     flex: 1;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
@@ -382,20 +402,34 @@ main {
     text-align: center;
 }
 
+.label-name {
+    color: var(--secondary-text);
+}
+
+.label-value {
+    color: var(--primary-text);
+    font-weight: 500;
+}
+
 .desktop {
     color: var(--secondary-blue);
+    background-color: var(--label-primary-bg);
 }
 
 .mobile {
-    color: var(--secondary-blue);
+    color: var(--tertiary-blue);
+    background-color: var(--label-secondary-bg);
 }
 
 .tablet {
-    color: var(--tertiary-blue);
+    color: var(--secondary-blue);
+    background-color: var(--label-primary-bg);
 }
 
 .others {
-    color: var(--quarternary-blue);
+    color: var(--tertiary-blue);
+    background-color: var(--label-secondary-bg);
+
 }
 
 .bottom-container {
@@ -430,6 +464,11 @@ main {
     padding: 20px 0;
 }
 
+.arrow {
+    height: 7px;
+    width: 12px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -442,7 +481,8 @@ td {
     border-bottom: 1px solid var(--secondary-background);
     color: var(--secondary-text);
 }
-th{
+
+th {
     color: var(--primary-text);
     font-weight: 500;
 }
@@ -453,9 +493,11 @@ td img {
     margin-right: 10px;
     vertical-align: middle;
 }
-.browser{
+
+.browser {
     font-weight: 600;
 }
+
 .change-indicator i {
     display: inline-flex;
     align-items: center;
@@ -469,14 +511,17 @@ td img {
 .change-indicator i {
     margin-right: 5px;
 }
-.first-column{
+
+.first-column {
     width: 225px;
 }
-.third-column{
+
+.third-column {
     width: 30%;
     margin-right: 20px;
 }
-.last-column{
+
+.last-column {
     text-align: right;
     width: fit-content;
 }
@@ -501,7 +546,8 @@ td img {
 
     .total-stats-container {
         display: grid;
-        grid-template-columns: 1fr 1fr; /*use autofit or autofill*/
+        grid-template-columns: 1fr 1fr;
+        /*use autofit or autofill*/
         grid-gap: 10px;
         justify-content: center;
     }
@@ -540,13 +586,22 @@ td img {
         top: 44%;
         font-size: 12px;
     }
+    th{
+        font-size: 0.8rem;
+    }
 
     td {
-        font-size: 12px;
-        width: 30px;
-    }
-    td img{
-        margin-right: 0;
+        font-size: 0.65rem;
+        width: 2rem;
+        align-items: center;
     }
 
+    td img {
+        margin-right: 3px;
+    }
+    .arrow {
+        height: 7px;
+        width: 12px;
+        padding-right: 5px;
+    }
 }

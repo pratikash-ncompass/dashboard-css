@@ -1,12 +1,43 @@
+let linectx = document.getElementById("websiteTrafficChart").getContext("2d");
+let piectx = document.getElementById("pieChart").getContext("2d");
+let barctx = document.getElementById("barChart").getContext("2d");
+let lineUpctx1 = document.getElementById("lineUp").getContext("2d");
+let lineUpctx2 = document.getElementById("lineUp2").getContext("2d");
+let linedownctx1 = document.getElementById("linedown").getContext("2d");
+let linedownctx2 = document.getElementById("linedown2").getContext("2d");
+
+const gradient = linectx.createLinearGradient(0, 0, 0, 400);
+gradient.addColorStop(0, "rgba(92, 199, 255, 0.8)");
+gradient.addColorStop(1, "rgba(92, 199, 255, 0)");
+
+const gradient2 = lineUpctx1.createLinearGradient(0, 0, 0, 400);
+gradient2.addColorStop(0, "rgba(0, 255, 0, 0.1)");
+gradient2.addColorStop(1, "rgba(0, 255, 0, 0)");
+
+const gradient3 = linedownctx1.createLinearGradient(0, 0, 0, 400);
+gradient3.addColorStop(0, "rgba(255, 0, 0, 0.1)");
+gradient3.addColorStop(1, "rgba(255, 0, 0, 0)");
+
+const imagePaths = [
+  "./assets/united-states.png",
+  "./assets/australia.png",
+  "./assets/india.png",
+  "./assets/nz.png",
+  "./assets/bosnia.png",
+  "./assets/turkey.png",
+  "./assets/germany.png",
+  "./assets/bangladesh.png",
+  "./assets/spain.png",
+  "./assets/argentina.png",
+];
+
+const imageDimensions = {
+  width: 18,
+  height: 20,
+};
 
 // LINE CHART
-let ctx1 = document.getElementById("websiteTrafficChart").getContext("2d");
-
-const gradient = ctx1.createLinearGradient(0, 0, 0, 400);
-gradient.addColorStop(0, 'rgba(92, 199, 255, 0.8)');   
-gradient.addColorStop(1, 'rgba(92, 199, 255, 0)');     
-
-let websiteTrafficChart = new Chart(ctx1, {
+let websiteTrafficChart = new Chart(linectx, {
   type: "line",
   data: {
     labels: [
@@ -45,17 +76,17 @@ let websiteTrafficChart = new Chart(ctx1, {
   options: {
     responsive: true,
     scales: {
-        x: {
-            grid: {
-                display: false,
-                borderDash: [5, 15]
-            }
+      x: {
+        grid: {
+          display: false,
+          borderDash: [5, 15],
         },
-        y: {
-          //   grid: {
-          //     display: false
-          // }
-        }
+      },
+      y: {
+        //   grid: {
+        //     display: false
+        // }
+      },
     },
     //use width
     plugins: {
@@ -69,9 +100,214 @@ let websiteTrafficChart = new Chart(ctx1, {
   },
 });
 
+let lineUpChart = new Chart(lineUpctx1, {
+  type: "line",
+  data: {
+    labels: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr"
+    ],
+    datasets: [
+      {
+        label: "Website Traffic",
+        data: [1000, 1500, 1300, 2000 ],
+        backgroundColor: gradient2,
+        borderColor: "green",
+        borderWidth: 2,
+        fill: true,
+        tension: 0.4,
+      },
+    ],
+  },
+  options: {
+    elements: {
+      point: {
+        radius: 0,
+      },
+    },
+    responsive: true,
+    scales: {
+      x: {
+        display: false,
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        display: false,
+        grid: {
+          display: false,
+        },
+      },
+    },
+    //use width
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  },
+});
+
+let lineUpChart2 = new Chart(lineUpctx2, {
+  type: "line",
+  data: {
+    labels: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr"
+    ],
+    datasets: [
+      {
+        label: "Website Traffic",
+        data: [1000, 1500, 1300, 2000 ],
+        backgroundColor: gradient2,
+        borderColor: "green",
+        borderWidth: 2,
+        fill: true,
+        tension: 0.4,
+      },
+    ],
+  },
+  options: {
+    elements: {
+      point: {
+        radius: 0,
+      },
+    },
+    responsive: true,
+    scales: {
+      x: {
+        display: false,
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        display: false,
+        grid: {
+          display: false,
+        },
+      },
+    },
+    //use width
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  },
+});
+
+
+let linedownChart = new Chart(linedownctx1, {
+  type: "line",
+  data: {
+    labels: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr"
+    ],
+    datasets: [
+      {
+        label: "Website Traffic",
+        data: [2000, 1300, 1500, 1000 ],
+        backgroundColor: gradient3,
+        borderColor: "red",
+        borderWidth: 2,
+        fill: true,
+        tension: 0.4,
+      },
+    ],
+  },
+  options: {
+    elements: {
+      point: {
+        radius: 0,
+      },
+    },
+    responsive: true,
+    scales: {
+      x: {
+        display: false,
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        display: false,
+        grid: {
+          display: false,
+        },
+      },
+    },
+    //use width
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  },
+});
+
+
+let linedownChart2 = new Chart(linedownctx2, {
+  type: "line",
+  data: {
+    labels: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr"
+    ],
+    datasets: [
+      {
+        label: "Website Traffic",
+        data: [2000, 1300, 1500, 1000 ],
+        backgroundColor: gradient3,
+        borderColor: "red",
+        borderWidth: 2,
+        fill: true,
+        tension: 0.4,
+      },
+    ],
+  },
+  options: {
+    elements: {
+      point: {
+        radius: 0,
+      },
+    },
+    responsive: true,
+    scales: {
+      x: {
+        display: false,
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        display: false,
+        grid: {
+          display: false,
+        },
+      },
+    },
+    //use width
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  },
+});
+
 // PIE CHART
-let ctx2 = document.getElementById("pieChart").getContext("2d");
-let pieChart = new Chart(ctx2, {
+let pieChart = new Chart(piectx, {
   type: "doughnut",
   data: {
     datasets: [
@@ -110,25 +346,6 @@ let pieChart = new Chart(ctx2, {
 });
 
 // BAR CHART
-const imagePaths = [
-  "./assets/australia.png",
-  "./assets/brazil.png",
-  "./assets/china.png",
-  "./assets/denmark.png",
-  "./assets/greece.png",
-  "./assets/india.png",
-  "./assets/spain.png",
-  "./assets/united-kingdom.png",
-  "./assets/united-states.png",
-  "./assets/united-states.png",
-];
-const imageDimensions = {
-  width: 18,
-  height: 20,
-};
-
-let ctx3 = document.getElementById("barChart").getContext("2d");
-
 const data = {
   labels: ["", "", "", "", "", "", "", "", "", ""],
   datasets: [
@@ -148,12 +365,12 @@ const options = {
   scales: {
     x: {
       grid: {
-        display: false
-      }
+        display: false,
+      },
     },
     y: {
       grid: {
-        display: false
+        display: false,
       },
       beginAtZero: true,
     },
@@ -199,4 +416,5 @@ const config = {
     },
   ],
 };
-let barChart = new Chart(ctx3, config);
+
+let barChart = new Chart(barctx, config);
